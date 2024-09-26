@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <h1 className="page-header">GUESS THE SONG</h1>
+      <h1 className="page-header">DAILY SONG GUESS</h1>
       <AudioPlayer songUrl={songUrl} />
       <GuessForm songName={songName} songVideoURL={songVideoURL} />
       <InfoGame />
