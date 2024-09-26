@@ -15,21 +15,21 @@
   color: white;
   border: solid 1px;
   border-color: white;
-  font-size: 24px; /* Ajuste inicial del tamaño de fuente */
+  font-size: 24px;
 }
 
-/* Media Query para pantallas de 768px o menos (tablets y móviles) */
+.header {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .page-header {
-    font-size: 20px; /* Reducir tamaño del texto para que se vea bien en pantallas pequeñas */
-    padding: 10px;
+    font-size: 20px;
   }
 }
 
-/* Media Query para pantallas de 480px o menos (móviles) */
 @media (max-width: 480px) {
   .page-header {
-    font-size: 18px; /* Ajustar aún más el tamaño del texto */
-    padding: 6px;
+    font-size: 18px;
   }
 }

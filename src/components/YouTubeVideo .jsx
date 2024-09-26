@@ -30,19 +30,20 @@ const YouTubeVideo = ({ videoId }) => {
   }, []);
 
   return (
-    <div>
+    <div className="video-container">
       {error ? (
-        <p>Error loading video: {error}</p>
+        <p className="error-message">Error loading video: {error}</p>
       ) : videoLoaded ? (
         <iframe
-          title={videoId}
+          title={`YouTube video: ${videoId}`}
           width="560"
           height="315"
           src={`https://www.youtube.com/embed/${videoId}`}
           allowFullScreen
+          className="youtube-iframe"
         />
       ) : (
-        <p>Loading video...</p>
+        <p className="loading-message">Loading video...</p>
       )}
     </div>
   );

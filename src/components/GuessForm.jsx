@@ -26,8 +26,12 @@ const GuessForm = ({ songName, songVideoURL }) => {
   };
   return (
     <div className="form-container">
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="input-text">GUESS SONG NAME</label>
+      <form
+        className="form"
+        onSubmit={handleSubmit}
+        aria-labelledby="guess-song-form"
+      >
+        <label htmlFor="input-text">Guess Song Name</label>
         <input
           id="input-text"
           type="text"
@@ -35,22 +39,23 @@ const GuessForm = ({ songName, songVideoURL }) => {
           value={inputValue}
           onChange={handleInputChange}
           aria-label="Enter the song name"
+          required
         />
-
         <input
           id="input-submit"
           type="submit"
-          className="buttom-style"
-          value="Guess"
+          className="button-style"
+          value="Guess..."
           aria-label="Submit your guess"
         />
       </form>
+
       {isModalOpen && (
         <ResultMessage
           onClose={handleCloseModal}
           songVideoURL={songVideoURL}
           songName={songName}
-          winning={isModalOpen}
+          winning={true}
         />
       )}
       {lossingModal && (
@@ -58,7 +63,7 @@ const GuessForm = ({ songName, songVideoURL }) => {
           onClose={handleCloseModal}
           songVideoURL={songVideoURL}
           songName={songName}
-          winning={isModalOpen}
+          winning={false}
         />
       )}
     </div>

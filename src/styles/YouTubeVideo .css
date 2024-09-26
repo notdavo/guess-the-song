@@ -1,0 +1,24 @@
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.error-message {
+  color: red; /* Color del texto para el mensaje de error */
+  font-weight: bold; /* Negrita para destacar el error */
+  margin: 10px 0; /* Espaciado alrededor del mensaje */
+}
+
+.loading-message {
+  color: orange; /* Color del texto para el mensaje de carga */
+  font-style: italic; /* Estilo en cursiva para el mensaje de carga */
+  margin: 10px 0; /* Espaciado alrededor del mensaje */
+}
+
+.youtube-iframe {
+  border: none; /* Elimina el borde por defecto del iframe */
+  border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+}
