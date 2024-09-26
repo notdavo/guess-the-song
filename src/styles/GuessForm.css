@@ -1,51 +1,74 @@
 .form-container {
+  width: 400px;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0 40px 0;
+  margin: 40px 0;
   gap: 10px;
 }
 
-#input-text {
-  width: 300px;
+.form label {
+  color: white;
+  font-weight: bold;
+}
+
+#input-text,
+.buttom-style {
+  width: 100%;
+  max-width: 300px; /* Ajusta según tus necesidades */
   height: 40px;
-  padding: 0px 10px 0 10px;
+  padding: 0 10px;
   font-size: 16px;
   border: none;
   border-radius: 15px;
   outline: none;
   transition: all 0.3s ease-in-out;
+}
+
+#input-text {
   color: #333;
   background-color: white;
 }
 
-.form-container label {
-  color: white;
-  font-weight: bold;
-  text-align: left;
-}
-
 .buttom-style {
   background-color: rgb(31, 31, 31);
-  width: 325px;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 25px; /* Borde redondeado */
-  outline: none;
   border: 3px solid rgb(185, 185, 185);
-  transition: all 0.3s ease-in-out;
   color: white;
-  padding: 10px 30px 10px 30px;
+  cursor: pointer;
 }
 
-.buttom-style:hover {
-  background-color: rgb(185, 185, 185);
-  color: rgb(31, 31, 31);
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-}
-
+.buttom-style:hover,
 .buttom-style:focus {
   background-color: rgb(185, 185, 185);
   color: rgb(31, 31, 31);
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  #input-text,
+  .buttom-style {
+    max-width: 100%;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .form-container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  #input-text,
+  .buttom-style {
+    max-width: 100%;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .form-container {
+    width: 60%;
+  }
 }

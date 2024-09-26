@@ -22,8 +22,8 @@ const GuessForm = ({ songName, songVideoURL }) => {
     }
   };
   return (
-    <div>
-      <form className="form-container" onSubmit={handleSubmit}>
+    <div className="form-container">
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="input-text">GUESS SONG NAME</label>
         <input
           id="input-text"

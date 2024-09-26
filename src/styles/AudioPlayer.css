@@ -1,3 +1,54 @@
+.audio-player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+  width: 12%;
+}
+
 .audio-player-container h2 {
   color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.audio-player-container audio {
+  max-width: 500px; /* Tamaño máximo para pantallas grandes */
+}
+
+.audio-player-container p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Media Query para pantallas de 768px o menos (tablets y móviles) */
+@media (max-width: 768px) {
+  .audio-player-container {
+    margin: 15px;
+  }
+
+  .audio-player-container h2 {
+    font-size: 20px;
+  }
+
+  .audio-player-container p {
+    font-size: 16px;
+  }
+}
+
+/* Media Query para pantallas de 480px o menos (móviles) */
+@media (max-width: 480px) {
+  .audio-player-container {
+    margin: 10px;
+    width: 90%;
+  }
+
+  .audio-player-container h2 {
+    font-size: 18px;
+  }
+
+  .audio-player-container p {
+    font-size: 14px;
+  }
 }

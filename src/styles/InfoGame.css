@@ -1,4 +1,75 @@
 .info-container {
   text-align: left;
   color: white;
+  padding: 20px;
+  max-width: 800px; /* Limita el ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.info-container h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Tamaño de fuente adaptable */
+}
+
+.info-container hr {
+  border: 0;
+  border-top: 1px solid #555; /* Línea sutil para separar secciones */
+  margin: 10px 0;
+}
+
+.info-container p,
+.info-container li {
+  margin: 10px 0;
+}
+
+.info-container ol {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.info-container ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.info-container strong {
+  font-weight: bold;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .info-container {
+    padding: 15px;
+  }
+
+  .info-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .info-container p,
+  .info-container li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-container {
+    padding: 10px;
+  }
+
+  .info-container h3 {
+    font-size: 1rem;
+  }
+
+  .info-container p,
+  .info-container li {
+    font-size: 0.9rem;
+  }
+
+  .info-container ol,
+  .info-container ul {
+    padding-left: 15px;
+  }
 }
