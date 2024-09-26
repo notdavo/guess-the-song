@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import "../styles/AudioPlayer.css";
 
 const AudioPlayer = ({ songUrl, difficulty }) => {
