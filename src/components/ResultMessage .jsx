@@ -5,20 +5,28 @@ const ResultMessage = ({ onClose, songVideoURL, songName, winning }) => {
   return (
     <div className="winning-overlay" onClick={onClose}>
       <div className="winning-content" onClick={(e) => e.stopPropagation()}>
-        {winning ? (
-          <h1>YOU GUESSED THE SONG!</h1>
-        ) : (
-          <h1>YOU DIDN'T GUESS THE SONG! {`:(`}</h1>
-        )}
-        {winning ? (
-          <h2>Indeed the song was {songName}</h2>
-        ) : (
-          <h2>The song was {songName}</h2>
-        )}
-        <YouTubeVideo videoId={songVideoURL} />
-        <button className="buttom-style" onClick={onClose}>
-          OK
-        </button>
+        <header>
+          <h1>
+            {winning
+              ? "YOU GUESSED THE SONG!"
+              : "YOU DIDN'T GUESS THE SONG! 😔"}
+          </h1>
+          <h2>
+            {winning
+              ? `Indeed the song was ${songName}`
+              : `The song was ${songName}`}
+          </h2>
+        </header>
+
+        <div className="video-container">
+          <YouTubeVideo videoId={songVideoURL} />
+        </div>
+
+        <footer>
+          <button className="button-style" onClick={onClose}>
+            OK
+          </button>
+        </footer>
       </div>
     </div>
   );

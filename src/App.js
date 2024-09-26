@@ -28,12 +28,20 @@ function App() {
   }, []);
 
   return (
-    <div className="main-container">
-      <h1 className="page-header">DAILY SONG GUESS</h1>
-      <AudioPlayer songUrl={songUrl} />
-      <GuessForm songName={songName} songVideoURL={songVideoURL} />
-      <InfoGame />
-    </div>
+    <main className="main-container">
+      <header className="header">
+        <h1 className="page-header">Daily Song Guess</h1>
+      </header>
+      <section aria-labelledby="audio-player">
+        <AudioPlayer songUrl={songUrl} />
+      </section>
+      <section aria-labelledby="guess-form">
+        <GuessForm songName={songName} songVideoURL={songVideoURL} />
+      </section>
+      <section aria-labelledby="info-game">
+        <InfoGame />
+      </section>
+    </main>
   );
 }
 

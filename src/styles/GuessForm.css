@@ -16,7 +16,7 @@
 }
 
 #input-text,
-.buttom-style {
+.button-style {
   width: 100%;
   max-width: 300px; /* Ajusta según tus necesidades */
   height: 40px;
@@ -33,21 +33,20 @@
   background-color: white;
 }
 
-.buttom-style {
+.button-style {
   background-color: rgb(31, 31, 31);
   border: 3px solid rgb(185, 185, 185);
   color: white;
   cursor: pointer;
 }
 
-.buttom-style:hover,
-.buttom-style:focus {
+.button-style:hover,
+.button-style:focus {
   background-color: rgb(185, 185, 185);
   color: rgb(31, 31, 31);
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .form-container {
     width: 60%;
   }
@@ -57,4 +56,4 @@
   .form-container {
     width: 60%;
   }
-}
+} */
