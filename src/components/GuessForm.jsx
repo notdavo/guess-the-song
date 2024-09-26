@@ -1,13 +1,15 @@
 import "../styles/GuessForm.css";
 import React, { useState } from "react";
-import Winning from "./Winning";
+import ResultMessage from "./ResultMessage ";
 
 const GuessForm = ({ songName, songVideoURL }) => {
   const [inputValue, setInputValue] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [lossingModal, setLossingModal] = useState(false);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    setLossingModal(false);
   };
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -19,6 +21,7 @@ const GuessForm = ({ songName, songVideoURL }) => {
       setIsModalOpen(true);
     } else {
       setIsModalOpen(false);
+      setLossingModal(true);
     }
   };
   return (
@@ -43,10 +46,19 @@ const GuessForm = ({ songName, songVideoURL }) => {
         />
       </form>
       {isModalOpen && (
-        <Winning
+        <ResultMessage
           onClose={handleCloseModal}
           songVideoURL={songVideoURL}
           songName={songName}
+          winning={isModalOpen}
+        />
+      )}
+      {lossingModal && (
+        <ResultMessage
+          onClose={handleCloseModal}
+          songVideoURL={songVideoURL}
+          songName={songName}
+          winning={isModalOpen}
         />
       )}
     </div>
