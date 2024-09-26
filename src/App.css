@@ -5,6 +5,7 @@
   text-align: center;
   background-color: rgb(31, 31, 31);
   height: 100vh;
+  overflow: hidden;
 }
 
 .page-header {
@@ -15,44 +16,21 @@
   color: white;
   border: solid 1px;
   border-color: white;
+  font-size: 24px; /* Ajuste inicial del tamaño de fuente */
 }
 
-.difficulty-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 100px;
+/* Media Query para pantallas de 768px o menos (tablets y móviles) */
+@media (max-width: 768px) {
+  .page-header {
+    font-size: 20px; /* Reducir tamaño del texto para que se vea bien en pantallas pequeñas */
+    padding: 10px;
+  }
 }
 
-.difficulty-container div {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.difficulty-container h1,
-ul {
-  color: white;
-}
-
-.difficulty-container ul {
-  text-align: left;
-}
-
-#hard,
-#medium,
-#easy {
-  font-weight: bold;
-}
-
-#hard {
-  color: red;
-}
-
-#medium {
-  color: yellow;
-}
-
-#easy {
-  color: green;
+/* Media Query para pantallas de 480px o menos (móviles) */
+@media (max-width: 480px) {
+  .page-header {
+    font-size: 18px; /* Ajustar aún más el tamaño del texto */
+    padding: 6px;
+  }
 }

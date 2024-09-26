@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1000; /* Asegúrate de que el modal esté sobre otros elementos */
+  padding: 20px; /* Añade un padding para que el contenido no toque los bordes en pantallas pequeñas */
 }
 
 .winning-content {
@@ -25,8 +26,45 @@
   border-radius: 8px; /* Bordes redondeados */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+  max-width: 90%; /* Limita el ancho máximo para dispositivos móviles */
+}
+
+.winning-content h1,
+.winning-content h2 {
+  margin: 10px 0;
+}
+
+.winning-content iframe {
+  max-width: 100%;
+  margin-top: 15px;
 }
 
 .winning-content button {
   margin: 30px 0 0 0;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .winning-content {
+    padding: 15px;
+  }
+
+  .winning-content iframe {
+    width: 100%;
+  }
+
+  .winning-content button {
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .winning-content button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
