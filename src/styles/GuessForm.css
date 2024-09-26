@@ -16,7 +16,7 @@
   outline: none;
   transition: all 0.3s ease-in-out;
   color: #333;
-  background-color: rgb(185, 185, 185);
+  background-color: white;
 }
 
 .form-container label {
