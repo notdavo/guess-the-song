@@ -19,8 +19,6 @@ function App() {
 
     if (dayWeek > 0 && dayWeek <= songsData.length) {
       const song = songsData[dayWeek - 1];
-      console.log(song.name);
-
       setSongName(song.name);
       setSongVideoURL(song.youtube_url);
     }
